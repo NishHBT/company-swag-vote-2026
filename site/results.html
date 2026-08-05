@@ -10,7 +10,7 @@
     />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/brand/hbt-h-icon-favicon.png" type="image/png" sizes="64x62" />
     <link rel="preconnect" href="https://api.fontshare.com" />
     <link
       rel="stylesheet"
@@ -27,7 +27,7 @@
         <a class="brand" href="./" data-testid="link-back-to-ballot">
           <img
             class="brand__mark"
-            src="assets/brand/hbt-h-icon.jpg"
+            src="assets/brand/hbt-h-icon-transparent.png"
             width="1115"
             height="1080"
             alt="Hoffman Building Technologies HBT icon"
@@ -64,8 +64,8 @@
         <p class="eyebrow">Administrator access</p>
         <h1 id="results-heading">Live voting results</h1>
         <p class="results__lede">
-          Enter the private administrator export token to review the current Top 15 and download the raw
-          vote ledger.
+          Enter the private administrator export token to review the current Top 15 purchase recommendation,
+          the complete ranking of all 60 products, and download the raw vote ledger.
         </p>
       </section>
 
@@ -157,13 +157,39 @@
                 <th scope="col">Score</th>
               </tr>
             </thead>
-            <tbody id="results-rows" data-testid="table-results-rows"></tbody>
+            <tbody id="results-top-rows" data-testid="table-top-results-rows"></tbody>
           </table>
         </div>
         <p class="results-output__note">
           Score = (Love × 2) + (Like × 1) + (Don’t Like × −1). Ties are ordered by Love count,
           total ratings, then product name.
         </p>
+
+        <section class="results-full" aria-labelledby="all-results-heading">
+          <div class="results-full__head">
+            <div>
+              <p class="eyebrow">Complete review</p>
+              <h2 id="all-results-heading">All 60 product results</h2>
+            </div>
+            <p>Every candidate is included, even if it has not received a rating yet.</p>
+          </div>
+          <div class="results-tablewrap">
+            <table>
+              <caption class="visually-hidden">Complete ranking of all 60 Company Swag Vote products</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Rank</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">Love</th>
+                  <th scope="col">Like</th>
+                  <th scope="col">Don’t Like</th>
+                  <th scope="col">Score</th>
+                </tr>
+              </thead>
+              <tbody id="results-all-rows" data-testid="table-all-results-rows"></tbody>
+            </table>
+          </div>
+        </section>
       </section>
     </main>
 

@@ -16,7 +16,8 @@
     adminToken: document.getElementById('admin-token'),
     status: document.getElementById('results-status'),
     output: document.getElementById('results-output'),
-    rows: document.getElementById('results-rows'),
+    topRows: document.getElementById('results-top-rows'),
+    allRows: document.getElementById('results-all-rows'),
     updated: document.getElementById('results-updated'),
     ballots: document.getElementById('kpi-ballots'),
     ratings: document.getElementById('kpi-ratings'),
@@ -164,11 +165,11 @@
     el.products.textContent = String(summary.products);
     el.updated.textContent = 'Loaded ' + new Date().toLocaleString();
 
-    el.rows.innerHTML = summary.ranked
-      .slice(0, 15)
+    function renderRows(items, prefix) {
+      return items
       .map(function (item, index) {
         return (
-          '<tr data-testid="row-results-' + item.id + '">' +
+          '<tr data-testid="row-' + prefix + '-results-' + item.id + '">' +
           '<td class="results-rank">' + (index + 1) + '</td>' +
           '<th scope="row"><span class="results-product">' + escapeHTML(item.name) + '</span><span class="results-id">' + escapeHTML(item.id) + '</span></th>' +
           '<td>' + item.love + '</td>' +
@@ -179,6 +180,10 @@
         );
       })
       .join('');
+    }
+
+    el.topRows.innerHTML = renderRows(summary.ranked.slice(0, 15), 'top');
+    el.allRows.innerHTML = renderRows(summary.ranked, 'all');
     el.output.hidden = false;
   }
 
