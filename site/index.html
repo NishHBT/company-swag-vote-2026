@@ -163,6 +163,24 @@
       </div>
     </main>
 
+    <dialog class="imagezoom" id="image-zoom" aria-labelledby="image-zoom-caption" data-testid="dialog-image-zoom">
+      <div class="imagezoom__frame">
+        <button
+          class="imagezoom__close"
+          id="image-zoom-close"
+          type="button"
+          aria-label="Close enlarged product image"
+          data-testid="button-close-image-zoom"
+        >
+          Close
+        </button>
+        <figure class="imagezoom__figure">
+          <img class="imagezoom__image" id="image-zoom-image" src="" alt="" />
+          <figcaption class="imagezoom__caption" id="image-zoom-caption"></figcaption>
+        </figure>
+      </div>
+    </dialog>
+
     <div class="progressbar" id="progress-bar" data-testid="progress-ballot" hidden>
       <div class="progressbar__inner">
         <div class="progressbar__meter" role="progressbar" aria-valuemin="0" aria-valuemax="60" aria-valuenow="0" aria-label="Products rated" id="progress-meter">

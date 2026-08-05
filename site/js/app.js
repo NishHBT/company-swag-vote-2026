@@ -35,6 +35,10 @@
     confirmationDetail: document.getElementById('confirmation-detail'),
     themeToggle: document.getElementById('theme-toggle'),
     themeToggleLabel: document.getElementById('theme-toggle-label'),
+    imageZoom: document.getElementById('image-zoom'),
+    imageZoomImage: document.getElementById('image-zoom-image'),
+    imageZoomCaption: document.getElementById('image-zoom-caption'),
+    imageZoomClose: document.getElementById('image-zoom-close'),
   };
 
   var state = {
@@ -42,6 +46,7 @@
     votes: Object.create(null),
     submitting: false,
     locked: false,
+    zoomTrigger: null,
   };
 
   /* ---------------------------------------------------------------- storage
@@ -164,6 +169,15 @@
     var figure;
     if (p.image) {
       figure =
+        '<button class="card__zoom" type="button" data-zoom-src="' +
+        escapeAttr(p.image) +
+        '" data-zoom-name="' +
+        escapeAttr(p.name) +
+        '" aria-label="View larger image of ' +
+        escapeAttr(p.name) +
+        '" data-testid="button-zoom-' +
+        p.id +
+        '">' +
         '<img class="card__img" src="' +
         p.image +
         '" alt="Product photograph of the ' +
@@ -172,7 +186,8 @@
         escapeAttr(p.category.toLowerCase()) +
         ' swag item." width="800" height="600" loading="lazy" decoding="async" data-testid="img-product-' +
         p.id +
-        '">';
+        '">' +
+        '</button>';
     } else {
       figure = fallbackFigure();
     }
@@ -363,6 +378,11 @@
   }
 
   function onClick(event) {
+    var zoom = event.target.closest('[data-zoom-src]');
+    if (zoom) {
+      openImageZoom(zoom);
+      return;
+    }
     var clear = event.target.closest('[data-clear]');
     if (!clear) return;
     var pid = clear.getAttribute('data-clear');
@@ -374,6 +394,41 @@
       });
     clear.hidden = true;
     updateProgress();
+  }
+
+  function openImageZoom(trigger) {
+    var src = trigger.getAttribute('data-zoom-src');
+    var name = trigger.getAttribute('data-zoom-name');
+    if (!src || !el.imageZoom) return;
+    state.zoomTrigger = trigger;
+    el.imageZoomImage.src = src;
+    el.imageZoomImage.alt = 'Larger view of ' + name;
+    el.imageZoomCaption.textContent = name;
+    if (typeof el.imageZoom.showModal === 'function') {
+      el.imageZoom.showModal();
+    } else {
+      el.imageZoom.setAttribute('open', '');
+    }
+    el.imageZoomClose.focus();
+  }
+
+  function closeImageZoom() {
+    if (!el.imageZoom || !el.imageZoom.open) return;
+    if (typeof el.imageZoom.close === 'function') {
+      el.imageZoom.close();
+    } else {
+      el.imageZoom.removeAttribute('open');
+    }
+  }
+
+  function resetImageZoom() {
+    el.imageZoomImage.src = '';
+    el.imageZoomImage.alt = '';
+    el.imageZoomCaption.textContent = '';
+    if (state.zoomTrigger) {
+      state.zoomTrigger.focus();
+      state.zoomTrigger = null;
+    }
   }
 
   function onFilter(event) {
@@ -566,6 +621,11 @@
   initTheme();
   el.sections.addEventListener('change', onChange);
   el.sections.addEventListener('click', onClick);
+  el.imageZoomClose.addEventListener('click', closeImageZoom);
+  el.imageZoom.addEventListener('click', function (event) {
+    if (event.target === el.imageZoom) closeImageZoom();
+  });
+  el.imageZoom.addEventListener('close', resetImageZoom);
   el.filters.addEventListener('click', onFilter);
   el.retry.addEventListener('click', loadCatalog);
   el.submitSticky.addEventListener('click', submitBallot);
