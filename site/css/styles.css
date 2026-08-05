@@ -575,13 +575,13 @@ svg {
   font-size: var(--text-sm);
 }
 
-.results-full {
+.results-feedback {
   margin-top: var(--space-12);
   padding-top: var(--space-8);
   border-top: 1px solid var(--color-border);
 }
 
-.results-full__head {
+.results-feedback__head {
   display: flex;
   flex-wrap: wrap;
   align-items: end;
@@ -590,14 +590,43 @@ svg {
   margin-bottom: var(--space-6);
 }
 
-.results-full__head h2 {
+.results-feedback__head h2 {
   margin-top: var(--space-2);
 }
 
-.results-full__head > p {
+.results-feedback__head > p {
   max-width: 35ch;
   font-size: var(--text-sm);
   color: var(--color-text-muted);
+}
+
+.results-feedback__empty {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.results-feedback__list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.results-feedback__item {
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.results-feedback__item p {
+  margin: 0;
+  white-space: pre-wrap;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  line-height: 1.55;
 }
 
 @media (max-width: 46rem) {

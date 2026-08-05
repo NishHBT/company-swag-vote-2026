@@ -64,8 +64,8 @@
         <p class="eyebrow">Administrator access</p>
         <h1 id="results-heading">Live voting results</h1>
         <p class="results__lede">
-          Enter the private administrator export token to review the current Top 15 purchase recommendation,
-          the complete ranking of all 60 products, and download the raw vote ledger.
+          Enter the private administrator export token to review the complete ranking of all 60 products,
+          anonymous voter feedback, and download the raw vote ledger.
         </p>
       </section>
 
@@ -124,7 +124,7 @@
         <div class="results-output__head">
           <div>
             <p class="eyebrow">Current ranking</p>
-            <h2>Top 15 recommended order</h2>
+            <h2>All 60 product results</h2>
           </div>
           <p class="results-output__updated" id="results-updated" data-testid="text-results-updated"></p>
         </div>
@@ -146,7 +146,7 @@
 
         <div class="results-tablewrap">
           <table>
-            <caption class="visually-hidden">Top 15 ranked Company Swag Vote products</caption>
+            <caption class="visually-hidden">Complete ranking of all 60 Company Swag Vote products</caption>
             <thead>
               <tr>
                 <th scope="col">Rank</th>
@@ -157,7 +157,7 @@
                 <th scope="col">Score</th>
               </tr>
             </thead>
-            <tbody id="results-top-rows" data-testid="table-top-results-rows"></tbody>
+            <tbody id="results-all-rows" data-testid="table-all-results-rows"></tbody>
           </table>
         </div>
         <p class="results-output__note">
@@ -165,30 +165,18 @@
           total ratings, then product name.
         </p>
 
-        <section class="results-full" aria-labelledby="all-results-heading">
-          <div class="results-full__head">
+        <section class="results-feedback" aria-labelledby="feedback-results-heading">
+          <div class="results-feedback__head">
             <div>
-              <p class="eyebrow">Complete review</p>
-              <h2 id="all-results-heading">All 60 product results</h2>
+              <p class="eyebrow">Voter comments</p>
+              <h2 id="feedback-results-heading">Anonymous feedback</h2>
             </div>
-            <p>Every candidate is included, even if it has not received a rating yet.</p>
+            <p>Comments are optional. Each submitted comment appears once, without voter identity.</p>
           </div>
-          <div class="results-tablewrap">
-            <table>
-              <caption class="visually-hidden">Complete ranking of all 60 Company Swag Vote products</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Rank</th>
-                  <th scope="col">Product</th>
-                  <th scope="col">Love</th>
-                  <th scope="col">Like</th>
-                  <th scope="col">Don’t Like</th>
-                  <th scope="col">Score</th>
-                </tr>
-              </thead>
-              <tbody id="results-all-rows" data-testid="table-all-results-rows"></tbody>
-            </table>
-          </div>
+          <p class="results-feedback__empty" id="results-feedback-empty" data-testid="text-feedback-empty">
+            No written feedback has been submitted yet.
+          </p>
+          <ul class="results-feedback__list" id="results-feedback-list" data-testid="list-feedback"></ul>
         </section>
       </section>
     </main>

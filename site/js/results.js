@@ -16,8 +16,9 @@
     adminToken: document.getElementById('admin-token'),
     status: document.getElementById('results-status'),
     output: document.getElementById('results-output'),
-    topRows: document.getElementById('results-top-rows'),
     allRows: document.getElementById('results-all-rows'),
+    feedbackList: document.getElementById('results-feedback-list'),
+    feedbackEmpty: document.getElementById('results-feedback-empty'),
     updated: document.getElementById('results-updated'),
     ballots: document.getElementById('kpi-ballots'),
     ratings: document.getElementById('kpi-ratings'),
@@ -115,6 +116,7 @@
   function summarize(records) {
     var tallies = {};
     var ballots = {};
+    var feedbackByBallot = {};
     state.catalog.products.forEach(function (product) {
       tallies[product.id] = {
         id: product.id,
@@ -128,6 +130,10 @@
     });
 
     records.forEach(function (record) {
+      var feedback = String(record.feedback || '').trim();
+      if (feedback && record.ballot_id && !Object.prototype.hasOwnProperty.call(feedbackByBallot, record.ballot_id)) {
+        feedbackByBallot[record.ballot_id] = feedback;
+      }
       var tally = tallies[record.product_id];
       if (!tally || !Object.prototype.hasOwnProperty.call(SCORE_BY_VOTE, record.vote)) return;
       tally.ratings += 1;
@@ -156,6 +162,9 @@
         return tallies[record.product_id] && Object.prototype.hasOwnProperty.call(SCORE_BY_VOTE, record.vote);
       }).length,
       products: ranked.filter(function (item) { return item.ratings > 0; }).length,
+      feedback: Object.keys(feedbackByBallot).map(function (ballotId) {
+        return feedbackByBallot[ballotId];
+      }),
     };
   }
 
@@ -165,11 +174,11 @@
     el.products.textContent = String(summary.products);
     el.updated.textContent = 'Loaded ' + new Date().toLocaleString();
 
-    function renderRows(items, prefix) {
+    function renderRows(items) {
       return items
       .map(function (item, index) {
         return (
-          '<tr data-testid="row-' + prefix + '-results-' + item.id + '">' +
+          '<tr data-testid="row-all-results-' + item.id + '">' +
           '<td class="results-rank">' + (index + 1) + '</td>' +
           '<th scope="row"><span class="results-product">' + escapeHTML(item.name) + '</span><span class="results-id">' + escapeHTML(item.id) + '</span></th>' +
           '<td>' + item.love + '</td>' +
@@ -182,8 +191,20 @@
       .join('');
     }
 
-    el.topRows.innerHTML = renderRows(summary.ranked.slice(0, 15), 'top');
-    el.allRows.innerHTML = renderRows(summary.ranked, 'all');
+    el.allRows.innerHTML = renderRows(summary.ranked);
+    el.feedbackList.innerHTML = summary.feedback
+      .map(function (feedback, index) {
+        return (
+          '<li class="results-feedback__item" data-testid="item-feedback-' +
+          (index + 1) +
+          '"><p>' +
+          escapeHTML(feedback) +
+          '</p></li>'
+        );
+      })
+      .join('');
+    el.feedbackList.hidden = !summary.feedback.length;
+    el.feedbackEmpty.hidden = summary.feedback.length > 0;
     el.output.hidden = false;
   }
 
