@@ -1,0 +1,555 @@
+{
+  "title": "Company Swag Vote 2026",
+  "org": "Hoffman Building Technologies",
+  "version": 1,
+  "productCount": 60,
+  "voteOptions": [
+    "Like",
+    "Love",
+    "Don't Like"
+  ],
+  "categories": [
+    {
+      "id": "duffle-bags",
+      "name": "Duffle Bags",
+      "count": 7
+    },
+    {
+      "id": "office-bags",
+      "name": "Office Bags",
+      "count": 7
+    },
+    {
+      "id": "heavy-duty-bags",
+      "name": "Heavy-Duty Bags",
+      "count": 2
+    },
+    {
+      "id": "bottles-mugs",
+      "name": "Bottles & Mugs",
+      "count": 5
+    },
+    {
+      "id": "notebooks-office",
+      "name": "Notebooks & Office",
+      "count": 3
+    },
+    {
+      "id": "coolers-lunch",
+      "name": "Coolers & Lunch",
+      "count": 3
+    },
+    {
+      "id": "desk-field-essentials",
+      "name": "Desk & Field Essentials",
+      "count": 7
+    },
+    {
+      "id": "tech-tools",
+      "name": "Tech & Tools",
+      "count": 8
+    },
+    {
+      "id": "gifts-recreation",
+      "name": "Gifts & Recreation",
+      "count": 5
+    },
+    {
+      "id": "outerwear",
+      "name": "Outerwear",
+      "count": 3
+    },
+    {
+      "id": "men-s-apparel",
+      "name": "Men's Apparel",
+      "count": 5
+    },
+    {
+      "id": "women-s-apparel",
+      "name": "Women's Apparel",
+      "count": 5
+    }
+  ],
+  "products": [
+    {
+      "id": "P01",
+      "name": "High-Capacity Travel Bag",
+      "category": "Duffle Bags",
+      "price": 50,
+      "image": "assets/products/High-Capacity-Travel-Bag.jpg",
+      "slug": "high-capacity-travel-bag"
+    },
+    {
+      "id": "P02",
+      "name": "MiiR® Bahia Recycled rPET 50L Wheeled Duffel",
+      "category": "Duffle Bags",
+      "price": 127,
+      "image": null,
+      "slug": "miir-bahia-recycled-rpet-50l-wheeled-duffel"
+    },
+    {
+      "id": "P03",
+      "name": "Oversized Carry-All Tote 9.5\" x 11.75\" x 20.5\"",
+      "category": "Duffle Bags",
+      "price": 30,
+      "image": null,
+      "slug": "oversized-carry-all-tote-9-5-x-11-75-x-20-5"
+    },
+    {
+      "id": "P04",
+      "name": "Waterproof Multicolored Duffel Bag",
+      "category": "Duffle Bags",
+      "price": 35,
+      "image": null,
+      "slug": "waterproof-multicolored-duffel-bag"
+    },
+    {
+      "id": "P05",
+      "name": "Multifunctional Foldable Tote Bag with Side Pockets",
+      "category": "Duffle Bags",
+      "price": 40,
+      "image": null,
+      "slug": "multifunctional-foldable-tote-bag-with-side-pockets"
+    },
+    {
+      "id": "P06",
+      "name": "Portable Hardware Electricians Backpacks",
+      "category": "Duffle Bags",
+      "price": 60,
+      "image": null,
+      "slug": "portable-hardware-electricians-backpacks"
+    },
+    {
+      "id": "P07",
+      "name": "Large Capacity Multi Function Tool Backpack",
+      "category": "Duffle Bags",
+      "price": 75,
+      "image": null,
+      "slug": "large-capacity-multi-function-tool-backpack"
+    },
+    {
+      "id": "P08",
+      "name": "Vila Recycled 15\" Computer Backpack",
+      "category": "Office Bags",
+      "price": 35,
+      "image": null,
+      "slug": "vila-recycled-15-computer-backpack"
+    },
+    {
+      "id": "P09",
+      "name": "Lightweight Sleek Travel High Tech Laptop Backpack",
+      "category": "Office Bags",
+      "price": 105,
+      "image": null,
+      "slug": "lightweight-sleek-travel-high-tech-laptop-backpack"
+    },
+    {
+      "id": "P10",
+      "name": "Mercer+Mettle Claremont Backpack",
+      "category": "Office Bags",
+      "price": 70,
+      "image": null,
+      "slug": "mercer-mettle-claremont-backpack"
+    },
+    {
+      "id": "P11",
+      "name": "Canvas Leather Computer Laptop Bag",
+      "category": "Office Bags",
+      "price": 50,
+      "image": null,
+      "slug": "canvas-leather-computer-laptop-bag"
+    },
+    {
+      "id": "P12",
+      "name": "PU Shoulder Messenger Computer Bag",
+      "category": "Office Bags",
+      "price": 80,
+      "image": null,
+      "slug": "pu-shoulder-messenger-computer-bag"
+    },
+    {
+      "id": "P13",
+      "name": "Tote Shoulder Crossbody Bags 3Pcs Purse Set",
+      "category": "Office Bags",
+      "price": 110,
+      "image": null,
+      "slug": "tote-shoulder-crossbody-bags-3pcs-purse-set"
+    },
+    {
+      "id": "P14",
+      "name": "Genuine Leather Business Shoulder Laptop Bag Briefcase",
+      "category": "Office Bags",
+      "price": 70,
+      "image": null,
+      "slug": "genuine-leather-business-shoulder-laptop-bag-briefcase"
+    },
+    {
+      "id": "P15",
+      "name": "Swissdigital Design® Commuter Backpack",
+      "category": "Heavy-Duty Bags",
+      "price": 99,
+      "image": "assets/products/Swissdigital-Design-Commuter-Backpack.jpg",
+      "slug": "swissdigital-design-commuter-backpack"
+    },
+    {
+      "id": "P16",
+      "name": "Targus® Spruce™ EcoSmart® Backpack",
+      "category": "Heavy-Duty Bags",
+      "price": 140,
+      "image": null,
+      "slug": "targus-sprucetm-ecosmart-backpack"
+    },
+    {
+      "id": "P17",
+      "name": "Urban Peak® 20oz Portage Flip Straw Water Bottle",
+      "category": "Bottles & Mugs",
+      "price": 30,
+      "image": null,
+      "slug": "urban-peak-20oz-portage-flip-straw-water-bottle"
+    },
+    {
+      "id": "P18",
+      "name": "30 Oz. Stainless Steel Insulated Mug with Handle",
+      "category": "Bottles & Mugs",
+      "price": 25,
+      "image": null,
+      "slug": "30-oz-stainless-steel-insulated-mug-with-handle"
+    },
+    {
+      "id": "P19",
+      "name": "40 Oz. Intrepid Stainless Steel Tumbler",
+      "category": "Bottles & Mugs",
+      "price": 30,
+      "image": null,
+      "slug": "40-oz-intrepid-stainless-steel-tumbler"
+    },
+    {
+      "id": "P20",
+      "name": "20 Oz. Full Color Himalayan Tumbler",
+      "category": "Bottles & Mugs",
+      "price": 25,
+      "image": null,
+      "slug": "20-oz-full-color-himalayan-tumbler"
+    },
+    {
+      "id": "P21",
+      "name": "16 Oz. Harvest Travel Tumbler",
+      "category": "Bottles & Mugs",
+      "price": 20,
+      "image": null,
+      "slug": "16-oz-harvest-travel-tumbler"
+    },
+    {
+      "id": "P22",
+      "name": "Spiral Bound Notebook & Harvest Pen",
+      "category": "Notebooks & Office",
+      "price": 15,
+      "image": "assets/products/Spiral-Bound-Notebook-and-Harvest-Pen.jpg",
+      "slug": "spiral-bound-notebook-harvest-pen"
+    },
+    {
+      "id": "P23",
+      "name": "Tri-Pocket Notebook",
+      "category": "Notebooks & Office",
+      "price": 15,
+      "image": null,
+      "slug": "tri-pocket-notebook"
+    },
+    {
+      "id": "P24",
+      "name": "Leeman Tuscany Tech Padfolio",
+      "category": "Notebooks & Office",
+      "price": 45,
+      "image": null,
+      "slug": "leeman-tuscany-tech-padfolio"
+    },
+    {
+      "id": "P25",
+      "name": "Igloo® Day Chiller Recycled Poly Lunch Bag Cooler",
+      "category": "Coolers & Lunch",
+      "price": 40,
+      "image": "assets/products/Igloo-Day-Chiller-Recycled-Poly-Lunch-Bag-Cooler.jpg",
+      "slug": "igloo-day-chiller-recycled-poly-lunch-bag-cooler"
+    },
+    {
+      "id": "P26",
+      "name": "Igloo® Day Chiller Recycled Poly XL Box 38 Can Soft Cooler",
+      "category": "Coolers & Lunch",
+      "price": 80,
+      "image": null,
+      "slug": "igloo-day-chiller-recycled-poly-xl-box-38-can-soft-cooler"
+    },
+    {
+      "id": "P27",
+      "name": "Color-Customizable Wheeled Cooler Box",
+      "category": "Coolers & Lunch",
+      "price": 180,
+      "image": null,
+      "slug": "color-customizable-wheeled-cooler-box"
+    },
+    {
+      "id": "P28",
+      "name": "Aspire Mouse Pad with 15W Wireless Charger",
+      "category": "Desk & Field Essentials",
+      "price": 30,
+      "image": "assets/products/Aspire-Mouse-Pad-with-15W-Wireless-Charger.jpg",
+      "slug": "aspire-mouse-pad-with-15w-wireless-charger"
+    },
+    {
+      "id": "P29",
+      "name": "Crest Non-Slip Mouse Pad with Foam Wrist Rest",
+      "category": "Desk & Field Essentials",
+      "price": 15,
+      "image": null,
+      "slug": "crest-non-slip-mouse-pad-with-foam-wrist-rest"
+    },
+    {
+      "id": "P30",
+      "name": "Leather Office Desk Mat Large Mouse Pad 23.6\" x 11.8\"",
+      "category": "Desk & Field Essentials",
+      "price": 18,
+      "image": null,
+      "slug": "leather-office-desk-mat-large-mouse-pad-23-6-x-11-8"
+    },
+    {
+      "id": "P31",
+      "name": "Magnetic Kickstand Worklight (COB)",
+      "category": "Desk & Field Essentials",
+      "price": 25,
+      "image": null,
+      "slug": "magnetic-kickstand-worklight-cob"
+    },
+    {
+      "id": "P32",
+      "name": "Dependable Toiletry Bag (cable & tool organizer)",
+      "category": "Desk & Field Essentials",
+      "price": 20,
+      "image": null,
+      "slug": "dependable-toiletry-bag-cable-tool-organizer"
+    },
+    {
+      "id": "P33",
+      "name": "25' Foot Locking Tape Measure",
+      "category": "Desk & Field Essentials",
+      "price": 20,
+      "image": null,
+      "slug": "25-foot-locking-tape-measure"
+    },
+    {
+      "id": "P34",
+      "name": "Tool Bag Roll Up",
+      "category": "Desk & Field Essentials",
+      "price": 25,
+      "image": null,
+      "slug": "tool-bag-roll-up"
+    },
+    {
+      "id": "P35",
+      "name": "High Density 10.000 mAh Pocket Powerbank",
+      "category": "Tech & Tools",
+      "price": 35,
+      "image": "assets/products/High-Density-10.000-mAh-Pocket-Powerbank.jpg",
+      "slug": "high-density-10-000-mah-pocket-powerbank"
+    },
+    {
+      "id": "P36",
+      "name": "Annex Wireless Charging Stand with Dual Ports & Pen Holder",
+      "category": "Tech & Tools",
+      "price": 14,
+      "image": null,
+      "slug": "annex-wireless-charging-stand-with-dual-ports-pen-holder"
+    },
+    {
+      "id": "P37",
+      "name": "BrandCharger® Tether Cord Phone Lanyard",
+      "category": "Tech & Tools",
+      "price": 10,
+      "image": null,
+      "slug": "brandcharger-tether-cord-phone-lanyard"
+    },
+    {
+      "id": "P38",
+      "name": "Nova Travel / Tech Accessory Organizer Case",
+      "category": "Tech & Tools",
+      "price": 15,
+      "image": null,
+      "slug": "nova-travel-tech-accessory-organizer-case"
+    },
+    {
+      "id": "P39",
+      "name": "Best Buddy Tools® Slim Wallet with Money Clip",
+      "category": "Tech & Tools",
+      "price": 10,
+      "image": null,
+      "slug": "best-buddy-tools-slim-wallet-with-money-clip"
+    },
+    {
+      "id": "P40",
+      "name": "26-Piece Deluxe Tool Kit",
+      "category": "Tech & Tools",
+      "price": 30,
+      "image": null,
+      "slug": "26-piece-deluxe-tool-kit"
+    },
+    {
+      "id": "P41",
+      "name": "iCOOL® Ridgeway 25-in-1 Precision Screwdriver Set",
+      "category": "Tech & Tools",
+      "price": 20,
+      "image": null,
+      "slug": "icool-ridgeway-25-in-1-precision-screwdriver-set"
+    },
+    {
+      "id": "P42",
+      "name": "EPEX® FlintRidge Multi-Tool Knife",
+      "category": "Tech & Tools",
+      "price": 35,
+      "image": null,
+      "slug": "epex-flintridge-multi-tool-knife"
+    },
+    {
+      "id": "P43",
+      "name": "Cobourg Wine Box - Black Satin",
+      "category": "Gifts & Recreation",
+      "price": 40,
+      "image": "assets/products/Cobourg-Wine-Box-Black-Satin.jpg",
+      "slug": "cobourg-wine-box-black-satin"
+    },
+    {
+      "id": "P44",
+      "name": "Storm 2 Umbrella (1 Imprint)",
+      "category": "Gifts & Recreation",
+      "price": 20,
+      "image": null,
+      "slug": "storm-2-umbrella-1-imprint"
+    },
+    {
+      "id": "P45",
+      "name": "Luxury Golf Presentation Gift Box - Ball, Divot Tool & Towel",
+      "category": "Gifts & Recreation",
+      "price": 35,
+      "image": null,
+      "slug": "luxury-golf-presentation-gift-box-ball-divot-tool-towel"
+    },
+    {
+      "id": "P46",
+      "name": "Rally Pickleball Set",
+      "category": "Gifts & Recreation",
+      "price": 20,
+      "image": null,
+      "slug": "rally-pickleball-set"
+    },
+    {
+      "id": "P47",
+      "name": "Golf Chipping Game",
+      "category": "Gifts & Recreation",
+      "price": 35,
+      "image": null,
+      "slug": "golf-chipping-game"
+    },
+    {
+      "id": "P48",
+      "name": "Pullover Hoodie",
+      "category": "Outerwear",
+      "price": 70,
+      "image": "assets/products/Pullover-Hoodie.jpg",
+      "slug": "pullover-hoodie"
+    },
+    {
+      "id": "P49",
+      "name": "21 Zones Rechargeable Heated Jacket",
+      "category": "Outerwear",
+      "price": 60,
+      "image": null,
+      "slug": "21-zones-rechargeable-heated-jacket"
+    },
+    {
+      "id": "P50",
+      "name": "Electric Heated Vest with 11 Heating Areas and Dual Switch",
+      "category": "Outerwear",
+      "price": 45,
+      "image": null,
+      "slug": "electric-heated-vest-with-11-heating-areas-and-dual-switch"
+    },
+    {
+      "id": "P51",
+      "name": "American Apparel® Tri-Blend Unisex Track T-Shirt",
+      "category": "Men's Apparel",
+      "price": 40,
+      "image": "assets/products/American-Apparel-Tri-Blend-Unisex-Track-T-Shirt.jpg",
+      "slug": "american-apparel-tri-blend-unisex-track-t-shirt"
+    },
+    {
+      "id": "P52",
+      "name": "Waffle Zippered Long-Sleeved Polo Shirt",
+      "category": "Men's Apparel",
+      "price": 28,
+      "image": null,
+      "slug": "waffle-zippered-long-sleeved-polo-shirt"
+    },
+    {
+      "id": "P53",
+      "name": "Summer Unisex Heavyweight Button-Up Polo T-Shirt",
+      "category": "Men's Apparel",
+      "price": 28,
+      "image": null,
+      "slug": "summer-unisex-heavyweight-button-up-polo-t-shirt"
+    },
+    {
+      "id": "P54",
+      "name": "Custom Full Color Dye Sublimation Performance Polo Shirt",
+      "category": "Men's Apparel",
+      "price": 30,
+      "image": null,
+      "slug": "custom-full-color-dye-sublimation-performance-polo-shirt"
+    },
+    {
+      "id": "P55",
+      "name": "Men's Tactical Sport Fleece Jacket",
+      "category": "Men's Apparel",
+      "price": 45,
+      "image": null,
+      "slug": "men-s-tactical-sport-fleece-jacket"
+    },
+    {
+      "id": "P56",
+      "name": "Women's Quick-Dry Golf T-Shirt",
+      "category": "Women's Apparel",
+      "price": 37,
+      "image": null,
+      "slug": "women-s-quick-dry-golf-t-shirt"
+    },
+    {
+      "id": "P57",
+      "name": "2024 Women's Fall Loose Long-Sleeved Pullover Sweatshirt",
+      "category": "Women's Apparel",
+      "price": 38,
+      "image": null,
+      "slug": "2024-women-s-fall-loose-long-sleeved-pullover-sweatshirt"
+    },
+    {
+      "id": "P58",
+      "name": "Womens Full Zip Sherpa Fleece Jacket",
+      "category": "Women's Apparel",
+      "price": 40,
+      "image": null,
+      "slug": "womens-full-zip-sherpa-fleece-jacket"
+    },
+    {
+      "id": "P59",
+      "name": "Custom Women's Waffle Knit Pullover Sweatshirt",
+      "category": "Women's Apparel",
+      "price": 40,
+      "image": null,
+      "slug": "custom-women-s-waffle-knit-pullover-sweatshirt"
+    },
+    {
+      "id": "P60",
+      "name": "Waterproof and Windproof Woman Jacket",
+      "category": "Women's Apparel",
+      "price": 30,
+      "image": null,
+      "slug": "waterproof-and-windproof-woman-jacket"
+    }
+  ]
+}

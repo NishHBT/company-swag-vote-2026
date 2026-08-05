@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Company Swag Vote 2026 — Hoffman Building Technologies</title>
+    <meta
+      name="description"
+      content="Rate 60 candidate swag products for Hoffman Building Technologies. One anonymous ballot per browser, no login required."
+    />
+    <meta name="robots" content="noindex" />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:title" content="Company Swag Vote 2026 — Hoffman Building Technologies" />
+    <meta
+      property="og:description"
+      content="Rate 60 candidate swag products. One anonymous ballot per browser, no login required."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link
+      rel="stylesheet"
+      href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#ballot" data-testid="link-skip-to-content">Skip to the ballot</a>
+
+    <header class="masthead">
+      <div class="masthead__inner">
+        <a class="brand" href="#top" data-testid="link-brand">
+          <svg
+            class="brand__mark"
+            viewBox="0 0 32 32"
+            role="img"
+            aria-label="Hoffman Building Technologies mark"
+            fill="none"
+          >
+            <rect x="1.5" y="1.5" width="29" height="29" rx="2" stroke="currentColor" stroke-width="2" />
+            <path d="M9 8v16M23 8v16" stroke="currentColor" stroke-width="3.4" stroke-linecap="square" />
+            <path d="M9 16h14" stroke="var(--color-accent)" stroke-width="3.4" stroke-linecap="square" />
+          </svg>
+          <span class="brand__text">
+            <span class="brand__org">Hoffman Building Technologies</span>
+            <span class="brand__title">Company Swag Vote 2026</span>
+          </span>
+        </a>
+
+        <button
+          class="theme-toggle"
+          type="button"
+          id="theme-toggle"
+          aria-pressed="false"
+          data-testid="button-theme-toggle"
+        >
+          <svg class="theme-toggle__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2" />
+            <path
+              d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span class="theme-toggle__label" id="theme-toggle-label">Dark mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="intro-heading">
+        <div class="intro__body">
+          <p class="eyebrow">Purchasing input · closes when voting ends</p>
+          <h1 id="intro-heading">Tell us which swag you would actually carry on the job.</h1>
+          <p class="intro__lede">
+            Sixty candidate products are below, grouped by category. Mark the ones you feel strongly
+            about — <strong>Love</strong>, <strong>Like</strong>, or <strong>Don't Like</strong>. Prices are
+            approximate maximums and drop with bulk quantity. Every item ships with either the full
+            Hoffman logo or the HBT icon.
+          </p>
+          <ul class="intro__facts">
+            <li><span class="intro__factnum" data-testid="text-catalog-count">60</span> products up for vote</li>
+            <li><span class="intro__factnum">3</span> ratings: Love, Like, Don't Like</li>
+            <li><span class="intro__factnum">0</span> questions required — skip anything</li>
+          </ul>
+          <p class="intro__note" data-testid="text-one-ballot-note">
+            <strong>One ballot per browser, no login.</strong> Your ballot is anonymous — we never ask for
+            your name or email. This browser generates a random identifier the first time you submit, and
+            after your ballot is accepted this page will not let you submit again from this browser.
+          </p>
+        </div>
+      </section>
+
+      <nav class="catnav" aria-label="Filter by product category">
+        <ul class="catnav__list" id="category-filters" data-testid="nav-category-filters">
+          <li>
+            <button class="chip is-active" type="button" data-filter="all" data-testid="filter-all" aria-pressed="true">
+              All products
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="ballot-wrap" id="ballot">
+        <section class="loading" id="loading-state" data-testid="status-loading" aria-live="polite">
+          <p class="loading__label">Loading the product catalog…</p>
+          <div class="skeleton-grid" aria-hidden="true">
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+            <div class="skeleton-card"></div>
+          </div>
+        </section>
+
+        <section class="errorstate" id="error-state" data-testid="status-error" hidden>
+          <h2>The catalog didn't load</h2>
+          <p id="error-detail">Something went wrong reading the product list.</p>
+          <button class="btn btn--secondary" type="button" id="retry-catalog" data-testid="button-retry-catalog">
+            Try again
+          </button>
+        </section>
+
+        <form id="ballot-form" hidden novalidate>
+          <div id="category-sections"></div>
+
+          <section class="closer" aria-labelledby="closer-heading">
+            <h2 id="closer-heading">Ready to send it in?</h2>
+            <p>
+              You can leave any product blank. Once your ballot is accepted it is final for this browser,
+              so give the list one last pass if you want to change something.
+            </p>
+            <div class="closer__actions">
+              <button class="btn btn--primary btn--lg" type="submit" data-testid="button-submit-ballot-closer">
+                Submit my ballot
+              </button>
+              <p class="closer__count">
+                <span data-testid="text-closer-rated">0</span> of
+                <span data-testid="text-closer-total">60</span> products rated
+              </p>
+            </div>
+            <p class="formstatus" id="form-status" role="status" data-testid="status-submit"></p>
+          </section>
+        </form>
+
+        <section class="confirmation" id="confirmation" data-testid="status-confirmation" hidden>
+          <svg class="confirmation__mark" viewBox="0 0 48 48" aria-hidden="true" fill="none">
+            <rect x="2" y="2" width="44" height="44" rx="3" stroke="currentColor" stroke-width="2.5" />
+            <path
+              d="M13 25.5l7.5 7.5L36 17"
+              stroke="var(--color-accent)"
+              stroke-width="4"
+              stroke-linecap="square"
+            />
+          </svg>
+          <h2>Ballot received. Thank you.</h2>
+          <p id="confirmation-detail">
+            Your anonymous ratings are recorded. This browser has now used its one ballot, so the form is
+            closed here. Results roll into the ranked Top 15 that drives the purchase order.
+          </p>
+          <p class="confirmation__meta">
+            Ratings submitted: <strong data-testid="text-confirmed-count">0</strong>
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <div class="progressbar" id="progress-bar" data-testid="progress-ballot" hidden>
+      <div class="progressbar__inner">
+        <div class="progressbar__meter" role="progressbar" aria-valuemin="0" aria-valuemax="60" aria-valuenow="0" aria-label="Products rated" id="progress-meter">
+          <span class="progressbar__fill" id="progress-fill"></span>
+        </div>
+        <p class="progressbar__text">
+          <strong data-testid="text-progress-count" id="progress-count">0</strong>
+          <span class="progressbar__of">/ <span id="progress-total">60</span> rated</span>
+        </p>
+        <button class="btn btn--primary" type="button" id="submit-sticky" data-testid="button-submit-ballot">
+          Submit my ballot
+        </button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>
+        Hoffman Building Technologies · Company Swag Vote 2026. Anonymous ballot — no login, no email
+        collected. Prices are approximate maximums before bulk pricing.
+      </p>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>

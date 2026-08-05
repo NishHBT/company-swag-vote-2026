@@ -1,0 +1,20 @@
+# Copy to wrangler.toml and fill in the placeholders. Do NOT commit wrangler.toml
+# with real ids if your repo is public — and never put ADMIN_TOKEN in this file.
+
+name = "swag-vote-api"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "swag_vote_2026"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[vars]
+# Comma-separated list of exact browser origins allowed to POST /votes.
+# Example for GitHub Pages: "https://hoffman-bt.github.io"
+# For a custom domain add it too: "https://hoffman-bt.github.io,https://swag.hbtech.com"
+ALLOWED_ORIGIN = "https://REPLACE_WITH_GITHUB_ORG.github.io"
+
+# ADMIN_TOKEN is a SECRET. Never define it here.
+# Set it with:  npx wrangler secret put ADMIN_TOKEN

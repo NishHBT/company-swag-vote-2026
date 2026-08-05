@@ -1,0 +1,18 @@
+{
+  "name": "swag-vote-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker + D1 backend for the Hoffman Building Technologies Company Swag Vote 2026 ballot.",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init:local": "wrangler d1 execute swag_vote_2026 --local --file=./schema.sql",
+    "db:init:remote": "wrangler d1 execute swag_vote_2026 --remote --file=./schema.sql",
+    "check": "node --check src/index.js && node --check src/catalog.js",
+    "test": "node test/smoke.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}
