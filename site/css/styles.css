@@ -205,6 +205,8 @@ svg {
   width: 34px;
   height: 34px;
   flex: none;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
 }
 
 .brand__text {
