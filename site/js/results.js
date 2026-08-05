@@ -28,6 +28,10 @@
 
   var state = { catalog: null, csv: '', loading: false };
 
+  if (window.SWAG_VOTE_CONFIG && window.SWAG_VOTE_CONFIG.VOTE_API_URL) {
+    el.apiUrl.value = String(window.SWAG_VOTE_CONFIG.VOTE_API_URL).replace(/\/+$/, '');
+  }
+
   function escapeHTML(value) {
     return String(value).replace(/[&<>]/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c];

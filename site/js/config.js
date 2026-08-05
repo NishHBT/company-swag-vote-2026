@@ -5,10 +5,9 @@
  *
  * VOTE_API_URL — the public base URL of the deployed Cloudflare Worker, with
  * no trailing slash, e.g. 'https://swag-vote-api.<your-subdomain>.workers.dev'.
- * Leave it blank until the Worker in ../worker is deployed; while blank the
- * ballot renders and can be filled in, but submitting shows a clear
- * "voting endpoint not configured" message and no vote-lock is stored.
+ * This public URL is safe to publish. The private administrator token stays
+ * only in the Cloudflare Worker secret store.
  */
 window.SWAG_VOTE_CONFIG = {
-  VOTE_API_URL: '',
+  VOTE_API_URL: 'https://company-swag-vote-2026-api.nishhbt.workers.dev',
 };
