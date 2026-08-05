@@ -28,7 +28,7 @@ function makeDB() {
       if (ballots.some((x) => x.browser_id === args[1])) {
         throw new Error('UNIQUE constraint failed: ballots.browser_id');
       }
-      ballots.push({ id: args[0], browser_id: args[1], submitted_utc: args[2] });
+      ballots.push({ id: args[0], browser_id: args[1], submitted_utc: args[2], feedback: args[3] });
       return null;
     }
     if (sql.startsWith('INSERT INTO votes')) {
@@ -44,6 +44,7 @@ function makeDB() {
         submitted_utc: (ballots.find((b) => b.id === v.ballot_id) || {}).submitted_utc,
         product_id: v.product_id,
         vote: v.vote,
+        feedback: (ballots.find((b) => b.id === v.ballot_id) || {}).feedback,
       }));
       return { results: rows };
     }
@@ -143,6 +144,7 @@ await check('accepts a valid ballot once', async () => {
         { productId: 'P22', vote: 'Like' },
         { productId: 'P60', vote: "Don't Like" },
       ],
+      feedback: 'Please consider a lanyard.',
     }),
     env
   );
@@ -180,10 +182,10 @@ await check('export returns one CSV row per product vote with the expected heade
   assert.deepEqual([bytes[0], bytes[1], bytes[2]], [0xef, 0xbb, 0xbf], 'expected a UTF-8 BOM for Excel');
   const text = new TextDecoder('utf-8').decode(bytes);
   const lines = text.replace(/^\uFEFF/, '').trim().split('\r\n');
-  assert.equal(lines[0], 'ballot_id,submitted_utc,product_id,product_name,category,price,vote');
+  assert.equal(lines[0], 'ballot_id,submitted_utc,product_id,product_name,category,price,vote,feedback');
   assert.equal(lines.length, 4);
-  assert.match(lines[1], /,P01,High-Capacity Travel Bag,Duffle Bags,50,Love$/);
-  assert.match(lines[3], /,P60,.*,Women's Apparel,30,Don't Like$/);
+  assert.match(lines[1], /,P01,High-Capacity Travel Bag,Duffle Bags,50,Love,Please consider a lanyard\.$/);
+  assert.match(lines[3], /,P60,.*,Women's Apparel,30,Don't Like,Please consider a lanyard\.$/);
   assert.match(res.headers.get('Content-Disposition'), /attachment; filename="swag-vote-2026-votes-/);
 });
 

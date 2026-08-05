@@ -16,6 +16,7 @@
 import { CATALOG_BY_ID, VOTE_VALUES } from './catalog.js';
 
 const MAX_BODY_BYTES = 64 * 1024;
+const MAX_FEEDBACK_CHARS = 1200;
 
 /* ------------------------------------------------------------------- CORS */
 
@@ -100,7 +101,20 @@ function validateBallot(payload) {
     seen.add(productId);
     clean.push({ productId, vote });
   }
-  return { browserId, votes: clean };
+
+  let feedback = null;
+  if (payload.feedback !== undefined && payload.feedback !== null) {
+    if (typeof payload.feedback !== 'string') {
+      return { error: 'feedback must be a text value' };
+    }
+    feedback = payload.feedback.trim();
+    if (feedback.length > MAX_FEEDBACK_CHARS) {
+      return { error: `feedback may not exceed ${MAX_FEEDBACK_CHARS} characters` };
+    }
+    if (!feedback) feedback = null;
+  }
+
+  return { browserId, votes: clean, feedback };
 }
 
 /* ----------------------------------------------------------------- routes */
@@ -150,10 +164,13 @@ async function postVotes(request, env) {
   const submittedUtc = new Date().toISOString().replace('T', ' ').slice(0, 19);
 
   const statements = [
-    env.DB.prepare('INSERT INTO ballots (id, browser_id, submitted_utc) VALUES (?, ?, ?)').bind(
+    env.DB
+      .prepare('INSERT INTO ballots (id, browser_id, submitted_utc, feedback) VALUES (?, ?, ?, ?)')
+      .bind(
       ballotId,
       parsed.browserId,
-      submittedUtc
+      submittedUtc,
+      parsed.feedback
     ),
     ...parsed.votes.map((v) =>
       env.DB.prepare('INSERT INTO votes (ballot_id, product_id, vote) VALUES (?, ?, ?)').bind(
@@ -201,7 +218,8 @@ async function exportCsv(request, env) {
     `SELECT v.ballot_id AS ballot_id,
             b.submitted_utc AS submitted_utc,
             v.product_id AS product_id,
-            v.vote AS vote
+            v.vote AS vote,
+            b.feedback AS feedback
        FROM votes v
        JOIN ballots b ON b.id = v.ballot_id
       ORDER BY b.submitted_utc ASC, v.ballot_id ASC, v.product_id ASC`
@@ -215,6 +233,7 @@ async function exportCsv(request, env) {
     'category',
     'price',
     'vote',
+    'feedback',
   ];
 
   const lines = [header.join(',')];
@@ -229,6 +248,7 @@ async function exportCsv(request, env) {
         product.category || '',
         product.price === undefined || product.price === null ? '' : product.price,
         row.vote,
+        row.feedback || '',
       ]
         .map(csvCell)
         .join(',')

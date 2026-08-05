@@ -7,7 +7,8 @@ PRAGMA foreign_keys = ON;
 CREATE TABLE IF NOT EXISTS ballots (
   id            TEXT PRIMARY KEY,           -- server-generated UUID
   browser_id    TEXT NOT NULL UNIQUE,       -- anonymous per-browser identifier
-  submitted_utc TEXT NOT NULL               -- 'YYYY-MM-DD HH:MM:SS' UTC
+  submitted_utc TEXT NOT NULL,              -- 'YYYY-MM-DD HH:MM:SS' UTC
+  feedback      TEXT                         -- optional anonymous free-text feedback
 );
 
 CREATE TABLE IF NOT EXISTS votes (

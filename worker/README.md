@@ -15,7 +15,7 @@ Excel-ready CSV export. No login, no email addresses, no personal data.
 
 | Table     | Columns                                    | Notes                                            |
 | --------- | ------------------------------------------ | ------------------------------------------------ |
-| `ballots` | `id`, `browser_id` (UNIQUE), `submitted_utc` | One row per accepted ballot. `browser_id` is a random client-generated UUID — not a person, not an email. |
+| `ballots` | `id`, `browser_id` (UNIQUE), `submitted_utc`, `feedback` | One row per accepted ballot. `browser_id` is a random client-generated UUID — not a person, not an email. `feedback` is optional anonymous free text. |
 | `votes`   | `id`, `ballot_id`, `product_id`, `vote`    | One row per product rating. `UNIQUE(ballot_id, product_id)`. |
 
 The `UNIQUE` constraint on `ballots.browser_id` is what enforces
@@ -41,7 +41,8 @@ Request body:
   "votes": [
     { "productId": "P01", "vote": "Love" },
     { "productId": "P17", "vote": "Don't Like" }
-  ]
+  ],
+  "feedback": "Please consider adding a branded lanyard."
 }
 ```
 
@@ -61,7 +62,7 @@ Requires the request header `X-Admin-Token: <ADMIN_TOKEN>`. Returns one row per
 product vote with a UTF-8 BOM and CRLF line endings so Excel opens it cleanly:
 
 ```
-ballot_id,submitted_utc,product_id,product_name,category,price,vote
+ballot_id,submitted_utc,product_id,product_name,category,price,vote,feedback
 ```
 
 ### `GET /health`

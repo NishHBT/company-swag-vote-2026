@@ -33,6 +33,7 @@
     status: document.getElementById('form-status'),
     confirmation: document.getElementById('confirmation'),
     confirmationDetail: document.getElementById('confirmation-detail'),
+    feedback: document.getElementById('feedback'),
     themeToggle: document.getElementById('theme-toggle'),
     themeToggleLabel: document.getElementById('theme-toggle-label'),
     imageZoom: document.getElementById('image-zoom'),
@@ -481,10 +482,14 @@
   function setSubmitting(flag) {
     state.submitting = flag;
     document
-      .querySelectorAll('[data-testid="button-submit-ballot"], [data-testid="button-submit-ballot-closer"]')
+      .querySelectorAll(
+        '[data-testid="button-submit-ballot"], [data-testid="button-submit-ballot-closer"], [data-testid="input-feedback"]'
+      )
       .forEach(function (b) {
         b.disabled = flag;
-        b.textContent = flag ? 'Submitting…' : 'Submit my ballot';
+        if (b.matches('[data-testid="button-submit-ballot"], [data-testid="button-submit-ballot-closer"]')) {
+          b.textContent = flag ? 'Submitting…' : 'Submit my ballot';
+        }
       });
   }
 
@@ -512,7 +517,8 @@
     setSubmitting(true);
     setStatus('Sending your ballot…', 'busy');
 
-    var payload = { browserId: browserId(), votes: votes };
+    var feedback = el.feedback ? el.feedback.value.trim() : '';
+    var payload = { browserId: browserId(), votes: votes, feedback: feedback || null };
 
     fetch(base + '/votes', {
       method: 'POST',
