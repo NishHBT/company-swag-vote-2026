@@ -84,7 +84,7 @@
       "name": "MiiR® Bahia Recycled rPET 50L Wheeled Duffel",
       "category": "Duffle Bags",
       "price": 127,
-      "image": null,
+      "image": "assets/products/MiiR-Bahia-Recycled-rPET-50L-Wheeled-Duffel.jpg",
       "slug": "miir-bahia-recycled-rpet-50l-wheeled-duffel"
     },
     {
@@ -92,7 +92,7 @@
       "name": "Oversized Carry-All Tote 9.5\" x 11.75\" x 20.5\"",
       "category": "Duffle Bags",
       "price": 30,
-      "image": null,
+      "image": "assets/products/Oversized-Carry-All-Tote.jpg",
       "slug": "oversized-carry-all-tote-9-5-x-11-75-x-20-5"
     },
     {
@@ -100,7 +100,7 @@
       "name": "Waterproof Multicolored Duffel Bag",
       "category": "Duffle Bags",
       "price": 35,
-      "image": null,
+      "image": "assets/products/Waterproof-Multicolored-Duffel-Bag.jpg",
       "slug": "waterproof-multicolored-duffel-bag"
     },
     {
@@ -108,7 +108,7 @@
       "name": "Multifunctional Foldable Tote Bag with Side Pockets",
       "category": "Duffle Bags",
       "price": 40,
-      "image": null,
+      "image": "assets/products/Multifunctional-Foldable-Tote-Bag-with-Side-Pockets.jpg",
       "slug": "multifunctional-foldable-tote-bag-with-side-pockets"
     },
     {
@@ -116,7 +116,7 @@
       "name": "Portable Hardware Electricians Backpacks",
       "category": "Duffle Bags",
       "price": 60,
-      "image": null,
+      "image": "assets/products/Portable-Hardware-Electricians-Backpacks.jpg",
       "slug": "portable-hardware-electricians-backpacks"
     },
     {
@@ -124,7 +124,7 @@
       "name": "Large Capacity Multi Function Tool Backpack",
       "category": "Duffle Bags",
       "price": 75,
-      "image": null,
+      "image": "assets/products/Large-Capacity-Multi-Function-Tool-Backpack.jpg",
       "slug": "large-capacity-multi-function-tool-backpack"
     },
     {
@@ -132,7 +132,7 @@
       "name": "Vila Recycled 15\" Computer Backpack",
       "category": "Office Bags",
       "price": 35,
-      "image": null,
+      "image": "assets/products/Vila-Recycled-15-Computer-Backpack.jpg",
       "slug": "vila-recycled-15-computer-backpack"
     },
     {
@@ -140,7 +140,7 @@
       "name": "Lightweight Sleek Travel High Tech Laptop Backpack",
       "category": "Office Bags",
       "price": 105,
-      "image": null,
+      "image": "assets/products/Lightweight-Sleek-Travel-High-Tech-Laptop-Backpack.jpg",
       "slug": "lightweight-sleek-travel-high-tech-laptop-backpack"
     },
     {
@@ -148,7 +148,7 @@
       "name": "Mercer+Mettle Claremont Backpack",
       "category": "Office Bags",
       "price": 70,
-      "image": null,
+      "image": "assets/products/Mercer-Mettle-Claremont-Backpack.jpg",
       "slug": "mercer-mettle-claremont-backpack"
     },
     {
@@ -156,7 +156,7 @@
       "name": "Canvas Leather Computer Laptop Bag",
       "category": "Office Bags",
       "price": 50,
-      "image": null,
+      "image": "assets/products/Canvas-Leather-Computer-Laptop-Bag.jpg",
       "slug": "canvas-leather-computer-laptop-bag"
     },
     {
@@ -164,7 +164,7 @@
       "name": "PU Shoulder Messenger Computer Bag",
       "category": "Office Bags",
       "price": 80,
-      "image": null,
+      "image": "assets/products/PU-Shoulder-Messenger-Computer-Bag.jpg",
       "slug": "pu-shoulder-messenger-computer-bag"
     },
     {
@@ -172,7 +172,7 @@
       "name": "Tote Shoulder Crossbody Bags 3Pcs Purse Set",
       "category": "Office Bags",
       "price": 110,
-      "image": null,
+      "image": "assets/products/Tote-Shoulder-Crossbody-Bags-3Pcs-Purse-Set.jpg",
       "slug": "tote-shoulder-crossbody-bags-3pcs-purse-set"
     },
     {
@@ -180,7 +180,7 @@
       "name": "Genuine Leather Business Shoulder Laptop Bag Briefcase",
       "category": "Office Bags",
       "price": 70,
-      "image": null,
+      "image": "assets/products/Genuine-Leather-Business-Shoulder-Laptop-Bag-Briefcase.jpg",
       "slug": "genuine-leather-business-shoulder-laptop-bag-briefcase"
     },
     {
@@ -196,7 +196,7 @@
       "name": "Targus® Spruce™ EcoSmart® Backpack",
       "category": "Heavy-Duty Bags",
       "price": 140,
-      "image": null,
+      "image": "assets/products/Targus-Spruce-EcoSmart-Backpack.jpg",
       "slug": "targus-sprucetm-ecosmart-backpack"
     },
     {
@@ -204,7 +204,7 @@
       "name": "Urban Peak® 20oz Portage Flip Straw Water Bottle",
       "category": "Bottles & Mugs",
       "price": 30,
-      "image": null,
+      "image": "assets/products/Urban-Peak-20oz-Portage-Flip-Straw-Water-Bottle.jpg",
       "slug": "urban-peak-20oz-portage-flip-straw-water-bottle"
     },
     {
@@ -212,7 +212,7 @@
       "name": "30 Oz. Stainless Steel Insulated Mug with Handle",
       "category": "Bottles & Mugs",
       "price": 25,
-      "image": null,
+      "image": "assets/products/30oz.-Stainless-Steel-Insulated-Mug-with-Handle-and-Built-In.jpg",
       "slug": "30-oz-stainless-steel-insulated-mug-with-handle"
     },
     {
@@ -220,7 +220,7 @@
       "name": "40 Oz. Intrepid Stainless Steel Tumbler",
       "category": "Bottles & Mugs",
       "price": 30,
-      "image": null,
+      "image": "assets/products/40-Oz.-Intrepid-Stainless-Steel-Tumbler.jpg",
       "slug": "40-oz-intrepid-stainless-steel-tumbler"
     },
     {
@@ -228,7 +228,7 @@
       "name": "20 Oz. Full Color Himalayan Tumbler",
       "category": "Bottles & Mugs",
       "price": 25,
-      "image": null,
+      "image": "assets/products/20-Oz.-Full-Color-Himalayan-Tumbler.jpg",
       "slug": "20-oz-full-color-himalayan-tumbler"
     },
     {
@@ -236,7 +236,7 @@
       "name": "16 Oz. Harvest Travel Tumbler",
       "category": "Bottles & Mugs",
       "price": 20,
-      "image": null,
+      "image": "assets/products/16-Oz.-Harvest-Travel-Tumbler.jpg",
       "slug": "16-oz-harvest-travel-tumbler"
     },
     {
@@ -252,7 +252,7 @@
       "name": "Tri-Pocket Notebook",
       "category": "Notebooks & Office",
       "price": 15,
-      "image": null,
+      "image": "assets/products/Tri-Pocket-Notebook.jpg",
       "slug": "tri-pocket-notebook"
     },
     {
@@ -260,7 +260,7 @@
       "name": "Leeman Tuscany Tech Padfolio",
       "category": "Notebooks & Office",
       "price": 45,
-      "image": null,
+      "image": "assets/products/Leeman.-Tuscany-Tech-Padfolio.jpg",
       "slug": "leeman-tuscany-tech-padfolio"
     },
     {
@@ -276,7 +276,7 @@
       "name": "Igloo® Day Chiller Recycled Poly XL Box 38 Can Soft Cooler",
       "category": "Coolers & Lunch",
       "price": 80,
-      "image": null,
+      "image": "assets/products/Igloo-Day-Chiller-Recycled-Poly-XL-Box-38-Can-Soft-Cooler.jpg",
       "slug": "igloo-day-chiller-recycled-poly-xl-box-38-can-soft-cooler"
     },
     {
@@ -284,7 +284,7 @@
       "name": "Color-Customizable Wheeled Cooler Box",
       "category": "Coolers & Lunch",
       "price": 180,
-      "image": null,
+      "image": "assets/products/Color-Customizable-Wheeled-Cooler-Box.jpg",
       "slug": "color-customizable-wheeled-cooler-box"
     },
     {
@@ -300,7 +300,7 @@
       "name": "Crest Non-Slip Mouse Pad with Foam Wrist Rest",
       "category": "Desk & Field Essentials",
       "price": 15,
-      "image": null,
+      "image": "assets/products/Crest-Non-Slip-Mouse-Pad-with-Foam-Wrist-Rest.jpg",
       "slug": "crest-non-slip-mouse-pad-with-foam-wrist-rest"
     },
     {
@@ -308,7 +308,7 @@
       "name": "Leather Office Desk Mat Large Mouse Pad 23.6\" x 11.8\"",
       "category": "Desk & Field Essentials",
       "price": 18,
-      "image": null,
+      "image": "assets/products/Leather-Office-Desk-Mat-Large-Mouse-Pad.jpg",
       "slug": "leather-office-desk-mat-large-mouse-pad-23-6-x-11-8"
     },
     {
@@ -316,7 +316,7 @@
       "name": "Magnetic Kickstand Worklight (COB)",
       "category": "Desk & Field Essentials",
       "price": 25,
-      "image": null,
+      "image": "assets/products/Magnetic-Kickstand-Worklight.jpg",
       "slug": "magnetic-kickstand-worklight-cob"
     },
     {
@@ -324,7 +324,7 @@
       "name": "Dependable Toiletry Bag (cable & tool organizer)",
       "category": "Desk & Field Essentials",
       "price": 20,
-      "image": null,
+      "image": "assets/products/Dependable-Toiletry-Bag.jpg",
       "slug": "dependable-toiletry-bag-cable-tool-organizer"
     },
     {
@@ -332,7 +332,7 @@
       "name": "25' Foot Locking Tape Measure",
       "category": "Desk & Field Essentials",
       "price": 20,
-      "image": null,
+      "image": "assets/products/25-Foot-Locking-tape-measure.jpg",
       "slug": "25-foot-locking-tape-measure"
     },
     {
@@ -340,7 +340,7 @@
       "name": "Tool Bag Roll Up",
       "category": "Desk & Field Essentials",
       "price": 25,
-      "image": null,
+      "image": "assets/products/Tool-Bag-Roll-Up.jpg",
       "slug": "tool-bag-roll-up"
     },
     {
@@ -356,7 +356,7 @@
       "name": "Annex Wireless Charging Stand with Dual Ports & Pen Holder",
       "category": "Tech & Tools",
       "price": 14,
-      "image": null,
+      "image": "assets/products/Annex-Wireless-Charging-Stand-with-Dual-Ports-Pen-Holder.jpg",
       "slug": "annex-wireless-charging-stand-with-dual-ports-pen-holder"
     },
     {
@@ -364,7 +364,7 @@
       "name": "BrandCharger® Tether Cord Phone Lanyard",
       "category": "Tech & Tools",
       "price": 10,
-      "image": null,
+      "image": "assets/products/BrandCharger-Tether-Cord-Phone-Lanyard.jpg",
       "slug": "brandcharger-tether-cord-phone-lanyard"
     },
     {
@@ -372,7 +372,7 @@
       "name": "Nova Travel / Tech Accessory Organizer Case",
       "category": "Tech & Tools",
       "price": 15,
-      "image": null,
+      "image": "assets/products/Nova-Travel.jpg",
       "slug": "nova-travel-tech-accessory-organizer-case"
     },
     {
@@ -380,7 +380,7 @@
       "name": "Best Buddy Tools® Slim Wallet with Money Clip",
       "category": "Tech & Tools",
       "price": 10,
-      "image": null,
+      "image": "assets/products/Best-Buddy-Tools-Slim-wallet.jpg",
       "slug": "best-buddy-tools-slim-wallet-with-money-clip"
     },
     {
@@ -388,7 +388,7 @@
       "name": "26-Piece Deluxe Tool Kit",
       "category": "Tech & Tools",
       "price": 30,
-      "image": null,
+      "image": "assets/products/26-Piece-Deluxe-Tool-Kit.jpg",
       "slug": "26-piece-deluxe-tool-kit"
     },
     {
@@ -396,7 +396,7 @@
       "name": "iCOOL® Ridgeway 25-in-1 Precision Screwdriver Set",
       "category": "Tech & Tools",
       "price": 20,
-      "image": null,
+      "image": "assets/products/iCOOL-Ridgeway-25-in-1.jpg",
       "slug": "icool-ridgeway-25-in-1-precision-screwdriver-set"
     },
     {
@@ -404,7 +404,7 @@
       "name": "EPEX® FlintRidge Multi-Tool Knife",
       "category": "Tech & Tools",
       "price": 35,
-      "image": null,
+      "image": "assets/products/EPEX-FlintRidge-Multi-Tool-Knife.jpg",
       "slug": "epex-flintridge-multi-tool-knife"
     },
     {
@@ -420,7 +420,7 @@
       "name": "Storm 2 Umbrella (1 Imprint)",
       "category": "Gifts & Recreation",
       "price": 20,
-      "image": null,
+      "image": "assets/products/Storm-2-Umbrella-1-Imprint.jpg",
       "slug": "storm-2-umbrella-1-imprint"
     },
     {
@@ -428,7 +428,7 @@
       "name": "Luxury Golf Presentation Gift Box - Ball, Divot Tool & Towel",
       "category": "Gifts & Recreation",
       "price": 35,
-      "image": null,
+      "image": "assets/products/Luxury-Golf-Presentation-Gift-Box-Ball-Divot-Tool-Towel.jpg",
       "slug": "luxury-golf-presentation-gift-box-ball-divot-tool-towel"
     },
     {
@@ -436,7 +436,7 @@
       "name": "Rally Pickleball Set",
       "category": "Gifts & Recreation",
       "price": 20,
-      "image": null,
+      "image": "assets/products/Rally-Pickleball-Set.jpg",
       "slug": "rally-pickleball-set"
     },
     {
@@ -444,7 +444,7 @@
       "name": "Golf Chipping Game",
       "category": "Gifts & Recreation",
       "price": 35,
-      "image": null,
+      "image": "assets/products/Golf-Chipping-Game.jpg",
       "slug": "golf-chipping-game"
     },
     {
@@ -460,7 +460,7 @@
       "name": "21 Zones Rechargeable Heated Jacket",
       "category": "Outerwear",
       "price": 60,
-      "image": null,
+      "image": "assets/products/21-Zones-Rechargeable-Heated-Jacket.jpg",
       "slug": "21-zones-rechargeable-heated-jacket"
     },
     {
@@ -468,7 +468,7 @@
       "name": "Electric Heated Vest with 11 Heating Areas and Dual Switch",
       "category": "Outerwear",
       "price": 45,
-      "image": null,
+      "image": "assets/products/Electric-Heated-Vest-with-11-Heating-Areas-and-Dual-Switch.jpg",
       "slug": "electric-heated-vest-with-11-heating-areas-and-dual-switch"
     },
     {
@@ -484,7 +484,7 @@
       "name": "Waffle Zippered Long-Sleeved Polo Shirt",
       "category": "Men's Apparel",
       "price": 28,
-      "image": null,
+      "image": "assets/products/Waffle-Zippered-Long-Sleeved-Polo-Shirt.jpg",
       "slug": "waffle-zippered-long-sleeved-polo-shirt"
     },
     {
@@ -492,7 +492,7 @@
       "name": "Summer Unisex Heavyweight Button-Up Polo T-Shirt",
       "category": "Men's Apparel",
       "price": 28,
-      "image": null,
+      "image": "assets/products/Summer-Men-s-Heavyweight-Button-Up-Polo-T-Shirt.jpg",
       "slug": "summer-unisex-heavyweight-button-up-polo-t-shirt"
     },
     {
@@ -500,7 +500,7 @@
       "name": "Custom Full Color Dye Sublimation Performance Polo Shirt",
       "category": "Men's Apparel",
       "price": 30,
-      "image": null,
+      "image": "assets/products/Custom-Full-Color-Dye-Sublimation-Performance-Polo-Shirt.jpg",
       "slug": "custom-full-color-dye-sublimation-performance-polo-shirt"
     },
     {
@@ -508,7 +508,7 @@
       "name": "Men's Tactical Sport Fleece Jacket",
       "category": "Men's Apparel",
       "price": 45,
-      "image": null,
+      "image": "assets/products/Men-s-Tactical-Sport-Fleece-Jacket.jpg",
       "slug": "men-s-tactical-sport-fleece-jacket"
     },
     {
@@ -516,7 +516,7 @@
       "name": "Women's Quick-Dry Golf T-Shirt",
       "category": "Women's Apparel",
       "price": 37,
-      "image": null,
+      "image": "assets/products/Women-s-Quick-Dry-Golf-T-Shirt.jpg",
       "slug": "women-s-quick-dry-golf-t-shirt"
     },
     {
@@ -524,7 +524,7 @@
       "name": "2024 Women's Fall Loose Long-Sleeved Pullover Sweatshirt",
       "category": "Women's Apparel",
       "price": 38,
-      "image": null,
+      "image": "assets/products/Women-s-Fall-Loose-Long-Sleeved-Pullover.jpg",
       "slug": "2024-women-s-fall-loose-long-sleeved-pullover-sweatshirt"
     },
     {
@@ -532,7 +532,7 @@
       "name": "Womens Full Zip Sherpa Fleece Jacket",
       "category": "Women's Apparel",
       "price": 40,
-      "image": null,
+      "image": "assets/products/Womens-Full-Zip-Sherpa-Fleece-Jacket.jpg",
       "slug": "womens-full-zip-sherpa-fleece-jacket"
     },
     {
@@ -540,7 +540,7 @@
       "name": "Custom Women's Waffle Knit Pullover Sweatshirt",
       "category": "Women's Apparel",
       "price": 40,
-      "image": null,
+      "image": "assets/products/Custom-Women-s-Waffle-Knit-Pullover-Sweatshirt.jpg",
       "slug": "custom-women-s-waffle-knit-pullover-sweatshirt"
     },
     {
@@ -548,7 +548,7 @@
       "name": "Waterproof and Windproof Woman Jacket",
       "category": "Women's Apparel",
       "price": 30,
-      "image": null,
+      "image": "assets/products/Waterproof-and-Windproof-Woman-Jacket.jpg",
       "slug": "waterproof-and-windproof-woman-jacket"
     }
   ]
