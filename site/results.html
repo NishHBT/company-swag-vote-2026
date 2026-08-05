@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Private Results | Company Swag Vote 2026</title>
+    <meta
+      name="description"
+      content="Private administrator dashboard for Company Swag Vote 2026 results."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link
+      rel="stylesheet"
+      href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#results-main" data-testid="link-skip-to-results">Skip to results</a>
+
+    <header class="masthead">
+      <div class="masthead__inner">
+        <a class="brand" href="./" data-testid="link-back-to-ballot">
+          <img
+            class="brand__mark"
+            src="assets/brand/hbt-h-icon.jpg"
+            width="1115"
+            height="1080"
+            alt="Hoffman Building Technologies HBT icon"
+          />
+          <span class="brand__text">
+            <span class="brand__org">Hoffman Building Technologies</span>
+            <span class="brand__title">Company Swag Vote 2026 · Private Results</span>
+          </span>
+        </a>
+
+        <button
+          class="theme-toggle"
+          type="button"
+          id="theme-toggle"
+          aria-pressed="false"
+          data-testid="button-theme-toggle"
+        >
+          <svg class="theme-toggle__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+            <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2" />
+            <path
+              d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <span class="theme-toggle__label" id="theme-toggle-label">Dark mode</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="results" id="results-main">
+      <section class="results__intro" aria-labelledby="results-heading">
+        <p class="eyebrow">Administrator access</p>
+        <h1 id="results-heading">Live voting results</h1>
+        <p class="results__lede">
+          Enter the deployed voting service URL and the private administrator export token to review the
+          current Top 15 and download the raw vote ledger.
+        </p>
+      </section>
+
+      <section class="results-access" aria-labelledby="access-heading">
+        <div>
+          <h2 id="access-heading">Load the private tally</h2>
+          <p>
+            This page does not store the export token. It is used only for this browser request and is
+            never included in the public site source.
+          </p>
+        </div>
+        <form id="results-form" class="results-form" novalidate>
+          <label class="field" for="api-url">
+            <span>Voting service URL</span>
+            <input
+              id="api-url"
+              name="apiUrl"
+              type="url"
+              inputmode="url"
+              autocomplete="url"
+              placeholder="https://swag-vote-api.example.workers.dev"
+              required
+              data-testid="input-results-api-url"
+            />
+          </label>
+          <label class="field" for="admin-token">
+            <span>Administrator export token</span>
+            <input
+              id="admin-token"
+              name="adminToken"
+              type="password"
+              autocomplete="one-time-code"
+              required
+              data-testid="input-results-admin-token"
+            />
+          </label>
+          <div class="results-form__actions">
+            <button class="btn btn--primary" type="submit" data-testid="button-load-results">
+              Load results
+            </button>
+            <button
+              class="btn btn--secondary"
+              type="button"
+              id="download-csv"
+              disabled
+              data-testid="button-download-results"
+            >
+              Download CSV
+            </button>
+          </div>
+          <p class="formstatus" id="results-status" role="status" data-testid="status-results"></p>
+        </form>
+      </section>
+
+      <section class="results-output" id="results-output" hidden aria-live="polite">
+        <div class="results-output__head">
+          <div>
+            <p class="eyebrow">Current ranking</p>
+            <h2>Top 15 recommended order</h2>
+          </div>
+          <p class="results-output__updated" id="results-updated" data-testid="text-results-updated"></p>
+        </div>
+
+        <dl class="results-kpis">
+          <div>
+            <dt>Ballots</dt>
+            <dd id="kpi-ballots" data-testid="text-results-ballots">0</dd>
+          </div>
+          <div>
+            <dt>Product ratings</dt>
+            <dd id="kpi-ratings" data-testid="text-results-ratings">0</dd>
+          </div>
+          <div>
+            <dt>Products rated</dt>
+            <dd id="kpi-products" data-testid="text-results-products">0</dd>
+          </div>
+        </dl>
+
+        <div class="results-tablewrap">
+          <table>
+            <caption class="visually-hidden">Top 15 ranked Company Swag Vote products</caption>
+            <thead>
+              <tr>
+                <th scope="col">Rank</th>
+                <th scope="col">Product</th>
+                <th scope="col">Love</th>
+                <th scope="col">Like</th>
+                <th scope="col">Don’t Like</th>
+                <th scope="col">Score</th>
+              </tr>
+            </thead>
+            <tbody id="results-rows" data-testid="table-results-rows"></tbody>
+          </table>
+        </div>
+        <p class="results-output__note">
+          Score = (Love × 2) + (Like × 1) + (Don’t Like × −1). Ties are ordered by Love count,
+          total ratings, then product name.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Hoffman Building Technologies · Company Swag Vote 2026. Private administrator view.</p>
+    </footer>
+
+    <script src="js/results.js" defer></script>
+  </body>
+</html>
